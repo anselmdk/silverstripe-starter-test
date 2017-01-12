@@ -1,6 +1,6 @@
-import CookiePolicyMsg from './layout/CookiePolicyMsg'
+import ExampleClass from './layout/ExampleClass'
 
 $(function() {
   $(document).foundation();
-  new CookiePolicyMsg();
+  new ExampleClass();
 });

@@ -1,0 +1,885 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.4
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+.typography {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  background: #fefefe;
+  font-size: 100%;
+}
+
+.typography .label {
+  display: inline-block;
+  padding: 0.33333rem 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border-radius: 0;
+  background: #2199e8;
+  color: #fefefe;
+}
+
+.typography .label.secondary {
+  background: #777;
+  color: #fefefe;
+}
+
+.typography .label.success {
+  background: #3adb76;
+  color: #fefefe;
+}
+
+.typography .label.warning {
+  background: #ffae00;
+  color: #fefefe;
+}
+
+.typography .label.alert {
+  background: #ec5840;
+  color: #fefefe;
+}
+
+.typography table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0;
+}
+
+.typography table thead,
+.typography table tbody,
+.typography table tfoot {
+  border: 1px solid #f1f1f1;
+  background-color: #fefefe;
+}
+
+.typography table caption {
+  font-weight: bold;
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+
+.typography table thead {
+  background: #f8f8f8;
+  color: #0a0a0a;
+}
+
+.typography table tfoot {
+  background: #f1f1f1;
+  color: #0a0a0a;
+}
+
+.typography table thead tr,
+.typography table tfoot tr {
+  background: transparent;
+}
+
+.typography table thead th,
+.typography table thead td,
+.typography table tfoot th,
+.typography table tfoot td {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.typography table tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.typography table tbody th,
+.typography table tbody td {
+  padding: 0.5rem 0.625rem 0.625rem;
+}
+
+@media screen and (max-width: 63.9375em) {
+  .typography table.stack thead {
+    display: none;
+  }
+  .typography table.stack tfoot {
+    display: none;
+  }
+  .typography table.stack tr,
+  .typography table.stack th,
+  .typography table.stack td {
+    display: block;
+  }
+  .typography table.stack td {
+    border-top: 0;
+  }
+}
+
+.typography table.scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.typography table.hover thead tr:hover {
+  background-color: #f3f3f3;
+}
+
+.typography table.hover tfoot tr:hover {
+  background-color: #ececec;
+}
+
+.typography table.hover tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.typography table.hover tbody tr:nth-of-type(even):hover {
+  background-color: #ececec;
+}
+
+.typography .table-scroll {
+  overflow-x: auto;
+}
+
+.typography .table-scroll table {
+  width: auto;
+}
+
+.typography div,
+.typography dl,
+.typography dt,
+.typography dd,
+.typography ul,
+.typography ol,
+.typography li,
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+.typography pre,
+.typography form,
+.typography p,
+.typography blockquote,
+.typography th,
+.typography td {
+  margin: 0;
+  padding: 0;
+}
+
+.typography p {
+  font-size: inherit;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+}
+
+.typography em,
+.typography i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+.typography strong,
+.typography b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+.typography small {
+  font-size: 80%;
+  line-height: inherit;
+}
+
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.typography h1 small,
+.typography h2 small,
+.typography h3 small,
+.typography h4 small,
+.typography h5 small,
+.typography h6 small {
+  color: #cacaca;
+  line-height: 0;
+}
+
+.typography h1 {
+  font-size: 1.5rem;
+}
+
+.typography h2 {
+  font-size: 1.25rem;
+}
+
+.typography h3 {
+  font-size: 1.1875rem;
+}
+
+.typography h4 {
+  font-size: 1.125rem;
+}
+
+.typography h5 {
+  font-size: 1.0625rem;
+}
+
+.typography h6 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  .typography h1 {
+    font-size: 3rem;
+  }
+  .typography h2 {
+    font-size: 2.5rem;
+  }
+  .typography h3 {
+    font-size: 1.9375rem;
+  }
+  .typography h4 {
+    font-size: 1.5625rem;
+  }
+  .typography h5 {
+    font-size: 1.25rem;
+  }
+  .typography h6 {
+    font-size: 1rem;
+  }
+}
+
+.typography a {
+  color: #2199e8;
+  text-decoration: none;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.typography a:hover, .typography a:focus {
+  color: #1585cf;
+}
+
+.typography a img {
+  border: 0;
+}
+
+.typography hr {
+  max-width: 75rem;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #cacaca;
+  border-left: 0;
+  margin: 1.25rem auto;
+  clear: both;
+}
+
+.typography ul,
+.typography ol,
+.typography dl {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  list-style-position: outside;
+}
+
+.typography li {
+  font-size: inherit;
+}
+
+.typography ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+
+.typography ol {
+  margin-left: 1.25rem;
+}
+
+.typography ul .typography ul, .typography ol .typography ul, .typography ul .typography ol, .typography ol .typography ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.typography dl {
+  margin-bottom: 1rem;
+}
+
+.typography dl dt {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.typography blockquote {
+  margin: 0 0 1rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #cacaca;
+}
+
+.typography blockquote, .typography blockquote p {
+  line-height: 1.6;
+  color: #8a8a8a;
+}
+
+.typography cite {
+  display: block;
+  font-size: 0.8125rem;
+  color: #8a8a8a;
+}
+
+.typography cite:before {
+  content: '\2014 \0020';
+}
+
+.typography abbr {
+  color: #0a0a0a;
+  cursor: help;
+  border-bottom: 1px dotted #0a0a0a;
+}
+
+.typography code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: normal;
+  color: #0a0a0a;
+  background-color: #e6e6e6;
+  border: 1px solid #cacaca;
+  padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
+.typography kbd {
+  padding: 0.125rem 0.25rem 0;
+  margin: 0;
+  background-color: #e6e6e6;
+  color: #0a0a0a;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.typography .subheader {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #8a8a8a;
+}
+
+.typography .lead {
+  font-size: 125%;
+  line-height: 1.6;
+}
+
+.typography .stat {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+p + .typography .stat {
+  margin-top: -1rem;
+}
+
+.typography .no-bullet {
+  margin-left: 0;
+  list-style: none;
+}
+
+.typography .text-left {
+  text-align: left;
+}
+
+.typography .text-right {
+  text-align: right;
+}
+
+.typography .text-center {
+  text-align: center;
+}
+
+.typography .text-justify {
+  text-align: justify;
+}
+
+@media screen and (min-width: 40em) {
+  .typography .medium-text-left {
+    text-align: left;
+  }
+  .typography .medium-text-right {
+    text-align: right;
+  }
+  .typography .medium-text-center {
+    text-align: center;
+  }
+  .typography .medium-text-justify {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .typography .large-text-left {
+    text-align: left;
+  }
+  .typography .large-text-right {
+    text-align: right;
+  }
+  .typography .large-text-center {
+    text-align: center;
+  }
+  .typography .large-text-justify {
+    text-align: justify;
+  }
+}
+
+.typography .show-for-print {
+  display: none !important;
+}
+
+@media print {
+  .typography * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .typography .show-for-print {
+    display: block !important;
+  }
+  .typography .hide-for-print {
+    display: none !important;
+  }
+  .typography table.show-for-print {
+    display: table !important;
+  }
+  .typography thead.show-for-print {
+    display: table-header-group !important;
+  }
+  .typography tbody.show-for-print {
+    display: table-row-group !important;
+  }
+  .typography tr.show-for-print {
+    display: table-row !important;
+  }
+  .typography td.show-for-print {
+    display: table-cell !important;
+  }
+  .typography th.show-for-print {
+    display: table-cell !important;
+  }
+  .typography a,
+  .typography a:visited {
+    text-decoration: underline;
+  }
+  .typography a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .typography .ir a:after,
+  .typography a[href^='javascript:']:after,
+  .typography a[href^='#']:after {
+    content: '';
+  }
+  .typography abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .typography pre,
+  .typography blockquote {
+    border: 1px solid #8a8a8a;
+    page-break-inside: avoid;
+  }
+  .typography thead {
+    display: table-header-group;
+  }
+  .typography tr,
+  .typography img {
+    page-break-inside: avoid;
+  }
+  .typography img {
+    max-width: 100% !important;
+  }
+  @page {
+    .typography {
+      margin: 0.5cm;
+    }
+  }
+  .typography p,
+  .typography h2,
+  .typography h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .typography h2,
+  .typography h3 {
+    page-break-after: avoid;
+  }
+}
+
+.typography .button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  background-color: #2199e8;
+  color: #fefefe;
+}
+
+[data-whatinput='mouse'] .typography .button {
+  outline: 0;
+}
+
+.typography .button:hover, .typography .button:focus {
+  background-color: #1583cc;
+  color: #fefefe;
+}
+
+.typography .button.tiny {
+  font-size: 0.6rem;
+}
+
+.typography .button.small {
+  font-size: 0.75rem;
+}
+
+.typography .button.large {
+  font-size: 1.25rem;
+}
+
+.typography .button.expanded {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.typography .button.primary {
+  background-color: #2199e8;
+  color: #fefefe;
+}
+
+.typography .button.primary:hover, .typography .button.primary:focus {
+  background-color: #147cc0;
+  color: #fefefe;
+}
+
+.typography .button.secondary {
+  background-color: #777;
+  color: #fefefe;
+}
+
+.typography .button.secondary:hover, .typography .button.secondary:focus {
+  background-color: #5f5f5f;
+  color: #fefefe;
+}
+
+.typography .button.success {
+  background-color: #3adb76;
+  color: #fefefe;
+}
+
+.typography .button.success:hover, .typography .button.success:focus {
+  background-color: #22bb5b;
+  color: #fefefe;
+}
+
+.typography .button.warning {
+  background-color: #ffae00;
+  color: #fefefe;
+}
+
+.typography .button.warning:hover, .typography .button.warning:focus {
+  background-color: #cc8b00;
+  color: #fefefe;
+}
+
+.typography .button.alert {
+  background-color: #ec5840;
+  color: #fefefe;
+}
+
+.typography .button.alert:hover, .typography .button.alert:focus {
+  background-color: #da3116;
+  color: #fefefe;
+}
+
+.typography .button.hollow {
+  border: 1px solid #2199e8;
+  color: #2199e8;
+}
+
+.typography .button.hollow, .typography .button.hollow:hover, .typography .button.hollow:focus {
+  background-color: transparent;
+}
+
+.typography .button.hollow:hover, .typography .button.hollow:focus {
+  border-color: #0c4d78;
+  color: #0c4d78;
+}
+
+.typography .button.hollow.primary {
+  border: 1px solid #2199e8;
+  color: #2199e8;
+}
+
+.typography .button.hollow.primary:hover, .typography .button.hollow.primary:focus {
+  border-color: #0c4d78;
+  color: #0c4d78;
+}
+
+.typography .button.hollow.secondary {
+  border: 1px solid #777;
+  color: #777;
+}
+
+.typography .button.hollow.secondary:hover, .typography .button.hollow.secondary:focus {
+  border-color: #3c3c3c;
+  color: #3c3c3c;
+}
+
+.typography .button.hollow.success {
+  border: 1px solid #3adb76;
+  color: #3adb76;
+}
+
+.typography .button.hollow.success:hover, .typography .button.hollow.success:focus {
+  border-color: #157539;
+  color: #157539;
+}
+
+.typography .button.hollow.warning {
+  border: 1px solid #ffae00;
+  color: #ffae00;
+}
+
+.typography .button.hollow.warning:hover, .typography .button.hollow.warning:focus {
+  border-color: #805700;
+  color: #805700;
+}
+
+.typography .button.hollow.alert {
+  border: 1px solid #ec5840;
+  color: #ec5840;
+}
+
+.typography .button.hollow.alert:hover, .typography .button.hollow.alert:focus {
+  border-color: #881f0e;
+  color: #881f0e;
+}
+
+.typography .button.disabled, .typography .button[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled:hover, .typography .button.disabled:focus, .typography .button[disabled]:hover, .typography .button[disabled]:focus {
+  background-color: #2199e8;
+  color: #fefefe;
+}
+
+.typography .button.disabled.primary, .typography .button[disabled].primary {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled.primary:hover, .typography .button.disabled.primary:focus, .typography .button[disabled].primary:hover, .typography .button[disabled].primary:focus {
+  background-color: #2199e8;
+  color: #fefefe;
+}
+
+.typography .button.disabled.secondary, .typography .button[disabled].secondary {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled.secondary:hover, .typography .button.disabled.secondary:focus, .typography .button[disabled].secondary:hover, .typography .button[disabled].secondary:focus {
+  background-color: #777;
+  color: #fefefe;
+}
+
+.typography .button.disabled.success, .typography .button[disabled].success {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled.success:hover, .typography .button.disabled.success:focus, .typography .button[disabled].success:hover, .typography .button[disabled].success:focus {
+  background-color: #3adb76;
+  color: #fefefe;
+}
+
+.typography .button.disabled.warning, .typography .button[disabled].warning {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled.warning:hover, .typography .button.disabled.warning:focus, .typography .button[disabled].warning:hover, .typography .button[disabled].warning:focus {
+  background-color: #ffae00;
+  color: #fefefe;
+}
+
+.typography .button.disabled.alert, .typography .button[disabled].alert {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.typography .button.disabled.alert:hover, .typography .button.disabled.alert:focus, .typography .button[disabled].alert:hover, .typography .button[disabled].alert:focus {
+  background-color: #ec5840;
+  color: #fefefe;
+}
+
+.typography .button.dropdown::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 0.4em;
+  border-color: #fefefe transparent transparent;
+  border-top-style: solid;
+  border-bottom-width: 0;
+  position: relative;
+  top: 0.4em;
+  float: right;
+  margin-left: 1em;
+  display: inline-block;
+}
+
+.typography .button.arrow-only::after {
+  margin-left: 0;
+  float: none;
+  top: -0.1em;
+}
+
+.typography {
+  /* IMAGES
+    -------------------------------------------- */
+}
+
+.typography .left {
+  text-align: left;
+}
+
+.typography .center {
+  text-align: center;
+}
+
+.typography .right {
+  text-align: right;
+}
+
+.typography iframe {
+  max-width: 100%;
+}
+
+.typography img,
+.typography div.img {
+  height: auto;
+  /* resets the image height so that it maintains its aspect ratio when width is set */
+}
+
+.typography img.left,
+.typography div.img.left {
+  float: left;
+  max-width: 50% !important;
+  margin: 6px 20px 10px 0;
+}
+
+.typography img.right,
+.typography div.img.right {
+  float: right;
+  max-width: 50% !important;
+  /* Responsive width */
+  margin: 6px 0 10px 20px;
+}
+
+.typography img.leftAlone,
+.typography div.img.leftAlone {
+  float: left;
+  margin-right: 100%;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.typography img.center,
+.typography div.img.center {
+  max-width: 100%;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.typography .captionImage {
+  margin-top: 5px;
+}
+
+.typography .captionImage img {
+  margin: 0;
+}
+
+.typography .captionImage.left {
+  float: left;
+  margin: 5px 30px 20px 0px;
+}
+
+.typography .captionImage.right {
+  float: right;
+  margin: 5px 0 20px 30px;
+}
+
+.typography .captionImage.left[style], .typography .captionImage.right[style] {
+  max-width: 50%;
+  /* Overides core width to make responsive */
+}
+
+.typography .captionImage.left[style] img, .typography .captionImage.right[style] img {
+  max-width: 100%;
+}
+
+.typography .captionImage.left img, .typography .captionImage.right img {
+  float: none;
+  max-width: none;
+}
+
+.typography .captionImage.left img {
+  margin-right: -10px;
+}
+
+.typography .captionImage.right img {
+  margin-left: -10px;
+}
+
+.typography .captionImage.right p {
+  text-align: left;
+}
+
+.typography .captionImage.leftAlone {
+  float: none;
+  margin: 0 20px 20px 0px;
+}
+
+.typography .captionImage.center {
+  margin: 0 auto 20px;
+}
+
+.typography .captionImage p {
+  clear: both;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=editor.css.map */

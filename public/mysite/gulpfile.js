@@ -24,10 +24,8 @@ const PATHS = {
 
 gulp.task('bundle-libs', function() {
   return gulp.src([
-    //there seems to be an issue with jquery 3 and our version of foundation
-    //'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/foundation-sites/node_modules/jquery/dist/jquery.min.js',
-    'node_modules/foundation-sites/dist/foundation.min.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js'
   ])
     .pipe(concat('libs.js'))
     .pipe(gulp.dest(PATHS.JS_DIST));

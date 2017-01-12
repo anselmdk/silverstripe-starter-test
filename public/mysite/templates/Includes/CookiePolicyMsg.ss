@@ -1,3 +1,4 @@
+<%--
 <div id="CookiePolicyMsg" class="hide-for-print">
     <div class="row">
         <div class="columns">
@@ -18,5 +19,4 @@
         </div>
     </div>
 </div>
-
-
+--%>

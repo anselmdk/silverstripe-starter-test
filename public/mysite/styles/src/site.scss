@@ -1,16 +1,12 @@
 @charset "utf-8";
 
-//Foundation
+@import 'variables';
+@import 'bootstrapvariables';
 
-//this is copied from
-//@import '../../node_modules/foundation-sites/scss/settings/settings';
-@import 'settings';
-@import '../../node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
-@import "mixins/mixins";
+@import './layout/layout';
+@import './typography/typography';
 
-@import "silverstripe/form";
-@import "layout/layout";
-@import "layout/CookiePolicyMsg";
-@import "layout/Navigation";
-@import "layout/SideBar";
+@import './pages/HomePage';
+
