@@ -23,6 +23,7 @@ class Page_Controller extends ContentController
     {
         parent::init();
         Requirements::block('framework/thirdparty/jquery/jquery.js');
+        Requirements::css('mysite/styles/dist/libs.css');
         Requirements::css('mysite/styles/dist/site.css');
         //live reload server
         if (Director::isDev() && @fsockopen('localhost', 35729, $errno, $errstr, 1)) {

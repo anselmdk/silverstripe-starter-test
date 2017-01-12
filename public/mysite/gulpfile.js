@@ -22,13 +22,23 @@ const PATHS = {
 };
 
 
-gulp.task('bundle-libs', function() {
+gulp.task('bundle-libs-js', function() {
   return gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/tether/dist/js/tether.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js'
   ])
     .pipe(concat('libs.js'))
     .pipe(gulp.dest(PATHS.JS_DIST));
+});
+
+gulp.task('bundle-libs-css', function() {
+  return gulp.src([
+    'node_modules/tether/dist/css/tether.css',
+    'node_modules/tether/dist/css/tether-theme-basic.css'
+  ])
+    .pipe(concat('libs.css'))
+    .pipe(gulp.dest(PATHS.CSS_DIST));
 });
 
 
@@ -75,7 +85,8 @@ gulp.task('site-watch', () => {
 gulp.task('build', [
   'css',
   'js',
-  'bundle-libs'
+  'bundle-libs-js',
+  'bundle-libs-css',
 ]);
 
 gulp.task('watch', [
