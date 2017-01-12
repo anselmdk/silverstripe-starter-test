@@ -1,37 +1,43 @@
 <?php
-class Page extends SiteTree {
 
-	private static $db = array(
-	);
+/**
+ * Class Page
+ *
+ */
+class Page extends SiteTree
+{
+    private static $db = [];
 
-	private static $has_one = array(
-	);
-
+    private static $has_one = [];
 }
-class Page_Controller extends ContentController {
+/**
+ * Class Page_Controller
+ *
+ * @property Page dataRecord
+ */
+class Page_Controller extends ContentController
+{
+    private static $allowed_actions = [];
 
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array (
-	);
+    public function init()
+    {
+        parent::init();
+        Requirements::block('framework/thirdparty/jquery/jquery.js');
+        Requirements::css('mysite/styles/dist/libs.css');
+        Requirements::css('mysite/styles/dist/site.css');
+        //live reload server
+        if (Director::isDev() && @fsockopen('localhost', 35729, $errno, $errstr, 1)) {
+            Requirements::javascript('http://localhost:35729/livereload.js?snipver=1');
+        }
+        Requirements::javascript('mysite/js/dist/libs.js');
+        Requirements::javascript('mysite/js/dist/site.js');
+    }
 
-	public function init() {
-		parent::init();
-		// You can include any CSS or JS required by your project here.
-		// See: http://doc.silverstripe.org/framework/en/reference/requirements
-	}
-
+    /**
+     * @return bool
+     */
+    function IsLive()
+    {
+        return Director::isLive();
+    }
 }
